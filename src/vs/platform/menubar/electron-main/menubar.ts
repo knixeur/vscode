@@ -499,6 +499,7 @@ export class Menubar {
 				const openInNewWindow = this.isOptionClick(event);
 				const success = this.windowsMainService.open({
 					context: OpenContext.MENU,
+                    contextWindowId: win?.id,
 					cli: this.environmentMainService.args,
 					urisToOpen: [openable],
 					forceNewWindow: openInNewWindow,
